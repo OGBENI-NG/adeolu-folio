@@ -1,156 +1,174 @@
-p {
-color: var(--White-Smoke);
-}
-/* -----------------------------------
-Gallery Section
---------------------------------------*/
-.portfolio-section {
-    padding: 50px 0;
-    background-color: var(--White-Smoke);
-    width: 100%;
-    
-    
-    
-}
-.portfolio-section h2 {
-    font-size: 28px;
-    font-weight: 700;
-    color: var(--Matte-Black);
-    text-transform: uppercase;
-}
-.portfolio-menu {
-    text-align: center;
-}
-.control {
-    background: #000;
-    color: #fff;
-    padding: 5px 10px;
-    border: 1px solid #343a40;
-    border-radius: 3px;
-    margin: 5px;
+
+i, .show-more {
     cursor: pointer;
-    -webkit-transition: all 05s ease;
-    -moz-transition: all 05s ease;
-    -ms-transition: all 05s ease;
-    -o-transition: all 05s ease;
-    transition: all 0.5s ease;
-    
 }
-.control:hover {
-    background: #343a40;
+i {
+    padding-left: 3px;
 }
-.mixitup-control-active {
-    color: #fff;
-    background: #343a40;
+.likes {
+    font-size: 1.1rem;
 }
-.fancybox-container button:focus {
-    outline: 0;
-    box-shadow: none;
+
+.fa-solid {
+    color: var(--Dark-Gray);
 }
-.portfolio-item {
-    padding-top: 30px;
-}
-.pd {
-    padding: 0;
-    padding: 10px;
-    margin-left: -20px;
-}
-.pd img {
-    height: 180px;
+.works-section{
     width: 100%;
-    transition: all 0.5s;
-    border-radius: 6px;
-    object-fit: fill;
-    
+    padding: 0 10px 20px;
 }
-.portfolio-overlay {
-    position: absolute;
-    z-index: 2;
-    top: 0;
-    left: 0;
-    background: rgba(0, 0, 0, 0.7);
+.works-section .my--work{
+    text-align: center;
+    display: block;
+    margin-top: -40px;
+    text-transform: capitalize;
+    padding-bottom: 10px;
+    font-size: 1.5rem;
+    color: var(--midnight-blue);
+}
+
+.work--overlay {
+    margin: 25px 0;
+    border-radius: 5px;
+    padding: 0;
+    overflow: hidden;
+    display: block;
+    -webkit-box-shadow: 0px 2px 5px -1px rgba(191,191,191,1);
+    -moz-box-shadow: 0px 2px 5px -1px rgba(191,191,191,1);
+    box-shadow: 0px 2px 5px -1px rgba(191,191,191,1);
+}
+.work--details--container{
+    background-color: var(--Light-shade-gary);
+    padding-bottom: 1px;
     width: 100%;
     height: 100%;
-    text-align: center;
-    visibility: hidden;
-    transition: all 0.5s;
-    transform: scale(0);
 }
-.portfolio-overlay p,
-.portfolio-overlay a {
-    position: relative;
-    z-index: 4;
+
+.work-img--container {
+    width: 100%;
+    height: 180px;
+    
 }
-.portfolio-overlay::before {
-    content: "";
-    width: 0;
-    height: 0;
-    border-width: 0;
-    position: absolute;
-    left: 10%;
-    top: 10%;
-    transition: 50ms height ease 150ms;
-    z-index: 3;
+.work-img {
+    width: 100%;
+    height: 100%;
+    border-radius: 3px 3px 0 0;
+    object-fit: fill;
 }
-.portfolio-overlay::after {
-    content: "";
-    width: 0;
-    height: 0;
-    border-width: 0;
-    position: absolute;
-    right: 10%;
-    bottom: 10%;
-    transition: 100ms width ease 200ms;
-    z-index: 3;
+.like--container, 
+.link--container {
+    display: flex;
+    align-items: center;
+    gap: 1.2em;
+    padding: 0 10px;
 }
-.portfolio-item:hover .portfolio-overlay::before {
-    width: 80%;
-    height: 80%;
-    border-top: 1px solid #50977f;
-    border-right: 1px solid #50977f;
-    transition: width 0.1s ease 0.3s, height 0.1s ease 0.5s;
+.like--container {
+    margin: 0 0 0 auto;
 }
-.portfolio-item:hover .portfolio-overlay::after {
-    width: 80%;
-    height: 80%;
-    border-bottom: 1px solid #50977f;
-    border-left: 1px solid #50977f;
-    transition: width 0.1s ease 0.6s, height 0.1s ease 0.7s;
+.project--name {
+    font-size: 1.2rem;
+    color: var(--Black--);
+    text-transform: capitalize;
+    font-weight: 600;
 }
-.portfolio-item li:hover .portfolio-overlay {
-    visibility: visible;
-    transform: scale(1);
-}
-.portfolio-overlay .category {
-    margin-top: 70px;
-    margin-bottom: 20px;
-    font-size: 16px;
-    color: #fff;
+.project--details {
     font-weight: 500;
+    margin-top: 0;
+    font-size: .875rem;
+    letter-spacing: 1.1px;
+    color: var(--Black--);
+    padding: 0 10px;
 }
-.portfolio-overlay .magnify-icon {
-    height: 40px;
-    width: 40px;
-    border-radius: 20px;
-    background: #50977f;
-    margin: 0 5px;
-    cursor: pointer;
-    display: inline-block;
-    transition: all 0.25s;
+.disliked, .liked {
+    font-size: 18px;
 }
-.portfolio-overlay .magnify-icon:hover {
-    background: #000;
+.liked {
+    color: var(--Medium-purple);
+   
 }
-.portfolio-overlay .magnify-icon p span i {
-    font-size: 15px;
-    color: #fff;
-    line-height: 40px;
-    cursor: pointer;
+.disliked {
+    color: var(--Radical-Red);
+} 
+.show-more {
+    background-color: var(--Light-shade-gary);
+    padding: 8px 10px;
+    text-align: center;
+    display: block;
+    border-radius: 5px;
+    font-weight: 600;
+    color: var(--Black--);
+    text-transform: capitalize;
+    letter-spacing: 1px;
+    margin: -20px 10px 20px;
+    
+    
 }
+
 @media (min-width: 768px){
-    .pd {
-        margin: 0 auto;
-        margin-left: -20px;
-        
+    .works-container {
+        display: grid;
+        grid-template-columns: repeat(4, minmax(150px, 1fr));
+        align-self: center;
+        padding: 20px;
+        grid-gap: 25px;
+        justify-self: baseline;
+        margin-bottom: 0;
+    }
+    .work--overlay {
+        margin: 0;
+    }
+    .show-more {
+        background-color: unset;
+        border-bottom: 2px solid var(--Radical-Red);
+        font-size: 1.8rem;
+        letter-spacing: 1.5px;
+        padding: 0;
+        display: flex;
+        align-items: center;
+        width: max-content;
+        margin: 30px auto;
+        border-radius: unset;
+        color: var(--midnight-blue);
     }
 }
+
+@media (max-width: 768px) {
+    .works-container {
+        grid-template-columns: repeat(2, minmax(140px, 1fr));
+        padding: 25px 10px;
+    }
+    .service--inner--container {
+        padding:  10px;
+        grid-template-columns: repeat(1, minmax(120px, 1fr));
+        margin: 20px 0;
+    }
+    .sidenav .nav--link {
+        padding: 18px 0 0 15px;
+    }
+    .sidenav {
+        padding-left: 5px;
+    }
+    ul li {
+        padding: 0 10px;
+    }
+    .project--details {
+        font-size: 1rem;
+    }
+    
+}
+
+@media only screen and 
+    (min-device-width: 1024px) and 
+    (max-device-width: 1024px) and 
+    (-webkit-min-device-pixel-ratio: 2) {
+    .works-container {
+        grid-template-columns: repeat(2, minmax(180px, 1fr));
+        padding: 25px 20px;
+        grid-gap: 3em;
+    }
+    .project--details {
+        font-size: 1.2rem;
+    }
+}
+
+  
+  
