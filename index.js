@@ -4,7 +4,7 @@ const navbarToggle = document.getElementById("navbar-toggle")
 const sidenav = document.getElementById("sidenav")
 const overlay = document.getElementById("overlay")
 const showMoreBtn = document.getElementById("show-more-btn")
-const worksContainer = document.getElementById("works-container") 
+//const worksContainer = document.getElementById("works-container") 
 
 let projectsToShow = 4
 const maxProjectsToShow = workData.length
@@ -45,7 +45,7 @@ document.addEventListener("click", (e) => {
 })
 
 function handleLike(likeId) {
-  const targetLikeObj = workData.find((like) => like.uuid === likeId)
+  const targetLikeObj = workData.find(like => like.uuid === likeId)
 
   if (targetLikeObj.isLike) {
     // Already liked, toggle to unliked
@@ -61,12 +61,11 @@ function handleLike(likeId) {
       targetLikeObj.isDislike = false
     }
   }
-
   render()
 }
 
 function dislikeClick(dislikeId) {
-  const targetDislikeObj = workData.find((dislike) => dislike.uuid === dislikeId)
+  const targetDislikeObj = workData.find(dislike => dislike.uuid === dislikeId)
 
   if (targetDislikeObj.isDislike) {
     // Already disliked, toggle to undisliked
@@ -100,13 +99,13 @@ function myWorks() {
           <div class="link--container">
             <span class="project--name">${projectName}</span>
             <div class="like--container">
-              <p class="likes" >${likes}
-              <i class="fa-solid fa-heart ${likeColor}" data-like="${uuid}" ></i>
-
+              <p class="likes" >
+                ${likes}
+                <i class="fa-solid fa-heart ${likeColor}" data-like="${uuid}" ></i>
               </p>
-              <p class="likes">${dislike}
-              <i class="fa-solid fa-thumbs-down ${dislikeColor}" data-dislike="${uuid}"></i>
-
+              <p class="likes">
+                ${dislike}
+                <i class="fa-solid fa-thumbs-down ${dislikeColor}" data-dislike="${uuid}"></i>
               </p>
             </div>
           </div>

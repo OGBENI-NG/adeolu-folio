@@ -10,12 +10,12 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
-    <link rel="stylesheet" href="intro.css">
+    <link rel="stylesheet" href="hero.css">
     <link rel="stylesheet" href="myWork.css">
     <title>adeolu-folio</title>
 </head>
 <body>
-    <header>
+    <header class="wrapper">
         <div class="navbar-header">
             <div  class="logo--container">
                 <img src="img/logo.png" alt="logo" class="logo"/>
@@ -44,15 +44,21 @@
         </div>
         
     </header>
-    <main>
+    <main class="">
         <!-- intro section -->
         <section class="intro--container"> 
             <div class="animation--container">
                 <span class="hero--intro" id="intro">Hello 👋 I'm</span>
-                  <span class="animation--name" id="name--works">adeolu miracle</span>
+                <span class="animation--name" id="name--works">adeolu miracle</span>
             </div>
         </section>
-        <section class="service--container">
+        <img 
+            src="img/service-wallpaper.jpg" 
+            class="service--wallpaper" 
+            title="service--wallpaper" 
+            alt="service--wallpaper"
+        >
+        <section class="service--container wrapper">
             <h2>what i do</h2>
             <div class="service--inner--container">
                 <fieldset class="service">
@@ -62,26 +68,31 @@
                     </p>
                 </fieldset>
                 <fieldset class="service">
-                    <legend>E-Commerce</legend>
+                    <legend>Responsive Design</legend>
                     <p  class="service--txt">
-                        I'm an e-commerce developer and am familiar with the specialized requirements of online shopping platforms, including user authentication, payment gateways, and shopping cart functionality. I'm skilled at building e-commerce applications that are secure, scalable, and optimized for performance.
+                        Built to look and perform beautifully on all types of devices, with a page structure that is logical and helps users (and search engines) browse efficiently
                     </p>
                 </fieldset>
                 <fieldset class="service">
-                    <legend>WordPress</legend>
+                    <legend>E-Commerce</legend>
                     <p  class="service--txt">
-                        My experience with WordPress, a popular content management system, allows you to build and customize websites quickly and efficiently. I'm familiar with WordPress themes and plugins and can use them to create websites that are easy to manage and update.
+                        I'm an e-commerce developer and am familiar with the specialized requirements of online shopping platforms, including user authentication, payment gateways, and shopping cart functionality.
                     </p>
                 </fieldset>
             </div>
         </section>
         <!-- my works section -->
-        <section class="works-section">
+        <section class="works-section wrapper">
             <a href="#" class="my--work">my works</a>
             <div class="works-container" id="works-container">
                 <!-- work data here -->
             </div>
             <span id="show-more-btn" class="show-more">show more</span>
+        </section>
+        <section class="about-me-container wrapper">
+            <div class="about">
+
+            </div>
         </section>
     </main>
    

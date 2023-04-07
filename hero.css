@@ -1,0 +1,212 @@
+
+.intro--container {
+    padding: 10em 0 5em;
+    background-color: var(--Blue-Haze);
+    background-image: url('img/div-icon.png');
+    background-position: right bottom, left top;
+    background-repeat: no-repeat, repeat;
+    background-size:180px, 230px, auto;
+    position: relative;
+    text-align: center;
+    
+    
+    
+}
+.intro--container::after {
+    position: absolute;
+    display: inline-block;
+    content: '';
+    background-color: var(--light-yellow);
+    height: 180px;
+    width: 150px;
+    border-radius: 100% 0% 0% 100% / 0% 0% 100% 100%;
+    top: 0;
+    right: 0;
+}
+.intro--container::before {
+    position: absolute;
+    display: block;
+    content: '';
+    background: var(--Minty-Aqua);
+    height: 75px;
+    width: 120px;
+    border-radius: 31% 69% 100% 0% / 4% 100% 0% 96% ;
+    bottom: 0;
+    left: 0;
+    
+}
+
+.hero--intro {
+    font-size: 2rem;
+    display: block;
+    margin-bottom: 5px;
+    font-weight: 500;
+    color: var(--midnight-blue);
+    text-shadow: 1px 2px 3px var(--dark-teal);
+    
+}
+.animation--name {
+    display: block;
+    font-weight: 700;
+    width: max-content;
+    margin-top: 10px;
+    text-transform: uppercase;
+    padding: 5px 10px;
+    border-radius: 10px;
+    transition: all 0.3s ease-in-out;
+    text-shadow: 0px 1px 2px var(--Matte-Black);
+    letter-spacing: 1.5px;
+    
+}
+.animation--container{
+    text-align: center;
+    display: inline-block;
+}
+  
+.background-color--blue {
+    background-color: var(--dark-teal);
+    color: var(--Snow-Drift);
+    
+}
+  
+.background-color--green {
+    background-color: var(--Prussian-Blue);
+    color: var(--Snow-Drift);
+}
+  
+.background-color--purple {
+    background-color: var(--Orange-peel);
+    color: var(--Snow-Drift);
+    
+}
+.service--container {
+    width: 100%;
+}
+.service--wallpaper{
+    width: 100%;
+    display: inline-block;
+    position: absolute;
+    z-index: -1;
+    -webkit-filter: blur(1px);
+    filter: blur(1px);
+    
+}
+.service--container h2 {
+    margin: 40px 0;
+    text-transform: capitalize;
+    color: var(--White-Smoke);
+    text-align: center;
+    font-size: 2.5rem;
+    position: relative;
+    background-color: transparent;
+    
+}
+.service--container h2::before {
+    position: absolute;
+    content: '';
+    z-index: 1;
+    height: 2px; 
+    background-color: var(--Minty-Aqua);
+    margin: 0.5em auto;
+    width: 5em;
+    bottom: -20px;
+
+}
+.service {
+    background-color: var(--White-Smoke);
+    padding: 0 2em 2em;
+    margin-bottom: 35px;
+    border: none;
+    box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.418);
+    border-radius: 5px;
+   
+    
+
+}
+legend {
+    background-color: var(--pastel-blue);
+    font-weight: 600;
+    padding: 8px 15px;
+    border-radius: 10px;
+    color: var(--Matte-Black);
+    letter-spacing: 1px;
+    margin: auto;
+    box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.418);
+    text-shadow: 0px 0px 1px var(--White-Smoke);
+}
+.service--txt {
+    letter-spacing: .8px;
+    font-weight: 500;
+    line-height: 1.5em;
+    color: var(--Matte-Black);
+    text-align: center;
+    padding: 0 5px;
+}
+
+@media (min-width: 600px) {
+    .service--inner--container{
+        display: grid;
+        grid-template-columns: repeat(2,auto);
+        grid-template-rows: repeat(2,auto);
+        grid-gap: 1em;
+    }
+    .intro--container {
+        background-size: 220px, 230px, auto;
+    }
+    .service {
+        margin: 0;
+        padding: 15px 50px;
+    }
+    .service:nth-of-type(3) {
+        grid-area: 2 / 1 / 2 / 3;
+        padding: 15px 70px;
+    }
+    
+    .animation--container{
+        text-align: left;
+    }
+   
+    .intro--container{
+        text-align: left;
+        padding-left: 5em;
+    }
+    .animation--name, .hero--intro {
+        font-size: 2.5rem;
+    }
+    .animation--name {
+        padding: 8px 20px;
+    }
+    .service--wallpaper {
+        height: 790px;
+    }
+    
+    
+}
+  
+@media (min-width: 1025px) {
+    .intro--container {
+        background-size: 275px, 230px, auto;
+    }
+    .service--inner--container {
+        grid-template-columns: repeat(3, minmax(150px, 1fr));
+        height: max-content;
+        
+        
+    }
+    
+    .service {
+        display: block;
+        padding: 25px;
+    }
+    .service:nth-of-type(3) {
+        padding: 25px;
+        grid-area: unset;
+    }
+    .service--wallpaper {
+        height: 550px;
+    }
+
+}
+  
+  
+  
